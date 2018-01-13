@@ -6,7 +6,7 @@
      rand(4..6).times do
        sentences << random_sentence
      end
- 
+
      sentences.join(" ")
    end
 
@@ -26,5 +26,9 @@
      letters = ('a'..'z').to_a
      letters.shuffle!
      letters[0,rand(3..8)].join
+   end
+
+   def self.random_integer
+      rand(1..100)
    end
  end
