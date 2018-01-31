@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
+  get 'users/create'
+
   resources :questions
   resources :topics do
     resources :posts, except: [:index]
