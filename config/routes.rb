@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
   resource :users, only: [:new, :create]
 
   resources :questions
