@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   def confirm
      @user = User.new
      p "confirm ****************"
-     @user.name = params[:user][:name]
+     @user.name = params.permit([:user][:name])
      @user.email = params[:user][:email]
      @user.password = params[:user][:password]
      @user.password_confirmation = params[:user][:password_confirmation]
