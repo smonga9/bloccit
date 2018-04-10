@@ -14,6 +14,7 @@ RSpec.describe Post, type: :model do
 
    it { is_expected.to have_many(:comments) }
    it { is_expected.to have_many(:votes) }
+   it { is_expected.to have_many(:favorites) }
 
   it { is_expected.to belong_to(:topic) }
   it { is_expected.to belong_to(:user) }
@@ -76,7 +77,7 @@ RSpec.describe Post, type: :model do
          post.votes.create!(value: 1, user: user)
          expect(post.rank).to eq (old_rank + 1)
        end
- 
+
        it "updates the rank when a down vote is created" do
          old_rank = post.rank
          post.votes.create!(value: -1, user: user)
