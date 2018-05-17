@@ -4,4 +4,4 @@ FactoryGirl.define do
  		topic
  		user
    	end
-end 
+end
